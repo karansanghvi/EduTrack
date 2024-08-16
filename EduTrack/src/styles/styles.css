@@ -24,6 +24,7 @@
     background-color: #03A4D9;
     border-radius: 8px;
     color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .login-div {
@@ -50,4 +51,13 @@
     font-size: 20px;
     color: white;
     border: 0px solid #ccc;
+}
+
+.box {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.description {
+    color: #808080;
 }

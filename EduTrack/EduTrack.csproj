@@ -67,27 +67,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bootstrap\css\bootstrap.min.css" />
-    <Content Include="bootstrap\js\bootstrap.bundle.min.js" />
-    <Content Include="bootstrap\js\bootstrap.min.js" />
-    <Content Include="bootstrap\js\popper.min.js" />
-    <Content Include="images\hero_banner.png" />
-    <Content Include="images\login_image.png" />
-    <Content Include="images\signup_image.png" />
+    <Content Include="src\bootstrap\css\bootstrap.min.css" />
+    <Content Include="src\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="src\bootstrap\js\bootstrap.min.js" />
+    <Content Include="src\bootstrap\js\popper.min.js" />
+    <Content Include="src\images\hero_banner.png" />
+    <Content Include="src\images\login_image.png" />
+    <Content Include="src\images\signup_image.png" />
     <Content Include="postcss.config.js" />
-    <Content Include="src\styles.css" />
+    <Content Include="src\styles\styles.css" />
     <Content Include="Web.config" />
     <Content Include="Default.aspx" />
-    <Content Include="Classes.aspx" />
     <Content Include="ToDo.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Signup.aspx" />
     <Content Include="Profile.aspx" />
+    <Content Include="AllClasses.aspx" />
+    <Content Include="JoinClass.aspx" />
+    <Content Include="Class.aspx" />
+    <Content Include="Assignment.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
@@ -98,13 +102,6 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Classes.aspx.cs">
-      <DependentUpon>Classes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Classes.aspx.designer.cs">
-      <DependentUpon>Classes.aspx</DependentUpon>
     </Compile>
     <Compile Include="ToDo.aspx.cs">
       <DependentUpon>ToDo.aspx</DependentUpon>
@@ -133,6 +130,34 @@
     </Compile>
     <Compile Include="Profile.aspx.designer.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllClasses.aspx.cs">
+      <DependentUpon>AllClasses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllClasses.aspx.designer.cs">
+      <DependentUpon>AllClasses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JoinClass.aspx.cs">
+      <DependentUpon>JoinClass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JoinClass.aspx.designer.cs">
+      <DependentUpon>JoinClass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Class.aspx.cs">
+      <DependentUpon>Class.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Class.aspx.designer.cs">
+      <DependentUpon>Class.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assignment.aspx.cs">
+      <DependentUpon>Assignment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assignment.aspx.designer.cs">
+      <DependentUpon>Assignment.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

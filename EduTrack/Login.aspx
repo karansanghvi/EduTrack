@@ -8,7 +8,7 @@
                 <asp:Image 
                     ID="heroBanner" 
                     runat="server" 
-                    ImageUrl="/images/login_image.png" 
+                    ImageUrl="/src/images/login_image.png" 
                     AlternateText="Hero Banner" 
                     width="450px"
                     height="500px"
