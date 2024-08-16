@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/StudentPanel.Master" AutoEventWireup="true" CodeBehind="JoinClass.aspx.cs" Inherits="EduTrack.WebForm8" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TeacherPanel.Master" AutoEventWireup="true" CodeBehind="CreateClass.aspx.cs" Inherits="EduTrack.WebForm13" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         .flex-container {
@@ -18,7 +18,7 @@
             cursor: pointer;
         }
 
-        .join-button {
+        .create-button {
             background-color: #03A4D9;
             color: white;
             border: none;
@@ -31,13 +31,17 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="p-5">
-        <h1>Join Class</h1>
+        <h1>Create Class</h1>
         <hr />
         <div class="box p-4">
-            <h3>Class Code</h3>
-            <p class="description">Ask your teacher for the class code, then enter it to join the class</p>
             <div class="pt-2">
-                <asp:TextBox ID="classCode" runat="server" placeholder="Class Code" CssClass="custom-textbox"></asp:TextBox>
+                <asp:Label ID="classNameLabel" runat="server">Enter Class Name:</asp:Label>
+                <asp:TextBox ID="className" runat="server" placeholder="Name" CssClass="custom-textbox"></asp:TextBox>
+            </div>
+            <br />
+            <div class="pt-2">
+                <asp:Label ID="classDescriptionLabel" runat="server">Enter Class Description:</asp:Label>
+                <asp:TextBox ID="classDescription" runat="server" placeholder="Description" CssClass="custom-textbox"></asp:TextBox>
             </div>
             <div class="p-4 flex-container">
                 <asp:Button 
@@ -45,9 +49,8 @@
                     runat="server" 
                     Text="Cancel" 
                     CssClass="cancel-button" 
-                    OnClick="cancelButton_Click"
                     />
-                <asp:Button ID="Button1" runat="server" Text="Join Class" CssClass="join-button" />
+                <asp:Button ID="Button1" runat="server" Text="Create Class" CssClass="create-button" />
             </div>
         </div>
     </div>

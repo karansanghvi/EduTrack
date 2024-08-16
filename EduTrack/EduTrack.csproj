@@ -77,52 +77,54 @@
     <Content Include="postcss.config.js" />
     <Content Include="src\styles\styles.css" />
     <Content Include="Web.config" />
-    <Content Include="Default.aspx" />
-    <Content Include="ToDo.aspx" />
-    <Content Include="Login.aspx" />
-    <Content Include="Signup.aspx" />
+    <Content Include="HomePage.aspx" />
+    <Content Include="StudentLogin.aspx" />
+    <Content Include="StudentSignup.aspx" />
     <Content Include="Profile.aspx" />
     <Content Include="AllClasses.aspx" />
     <Content Include="JoinClass.aspx" />
     <Content Include="Class.aspx" />
     <Content Include="Assignment.aspx" />
+    <Content Include="TeacherHomePage.aspx" />
+    <Content Include="TeacherLogin.aspx" />
+    <Content Include="TeacherSignup.aspx" />
+    <Content Include="StreamTeacherClass.aspx" />
+    <Content Include="CreateClass.aspx" />
+    <Content Include="ClassworkTeacherClass.aspx" />
+    <Content Include="StudentsTeacherClass.aspx" />
+    <Content Include="CreateAssignment.aspx" />
+    <Content Include="ClassworkAssignmentTeacherClass.aspx" />
+    <Content Include="ClassworkStudentsWorkTeacherClass.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Site1.Master.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
+    <Compile Include="StudentPanel.Master.cs">
+      <DependentUpon>StudentPanel.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Site1.Master.designer.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
+    <Compile Include="StudentPanel.Master.designer.cs">
+      <DependentUpon>StudentPanel.Master</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ToDo.aspx.cs">
-      <DependentUpon>ToDo.aspx</DependentUpon>
+    <Compile Include="StudentLogin.aspx.cs">
+      <DependentUpon>StudentLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ToDo.aspx.designer.cs">
-      <DependentUpon>ToDo.aspx</DependentUpon>
+    <Compile Include="StudentLogin.aspx.designer.cs">
+      <DependentUpon>StudentLogin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="StudentSignup.aspx.cs">
+      <DependentUpon>StudentSignup.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Signup.aspx.cs">
-      <DependentUpon>Signup.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Signup.aspx.designer.cs">
-      <DependentUpon>Signup.aspx</DependentUpon>
+    <Compile Include="StudentSignup.aspx.designer.cs">
+      <DependentUpon>StudentSignup.aspx</DependentUpon>
     </Compile>
     <Compile Include="Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
@@ -159,10 +161,88 @@
     <Compile Include="Assignment.aspx.designer.cs">
       <DependentUpon>Assignment.aspx</DependentUpon>
     </Compile>
+    <Compile Include="TeacherPanel.Master.cs">
+      <DependentUpon>TeacherPanel.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeacherPanel.Master.designer.cs">
+      <DependentUpon>TeacherPanel.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherHomePage.aspx.cs">
+      <DependentUpon>TeacherHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeacherHomePage.aspx.designer.cs">
+      <DependentUpon>TeacherHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherLogin.aspx.cs">
+      <DependentUpon>TeacherLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeacherLogin.aspx.designer.cs">
+      <DependentUpon>TeacherLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherSignup.aspx.cs">
+      <DependentUpon>TeacherSignup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeacherSignup.aspx.designer.cs">
+      <DependentUpon>TeacherSignup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StreamTeacherClass.aspx.cs">
+      <DependentUpon>StreamTeacherClass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StreamTeacherClass.aspx.designer.cs">
+      <DependentUpon>StreamTeacherClass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateClass.aspx.cs">
+      <DependentUpon>CreateClass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateClass.aspx.designer.cs">
+      <DependentUpon>CreateClass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClassworkTeacherClass.aspx.cs">
+      <DependentUpon>ClassworkTeacherClass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClassworkTeacherClass.aspx.designer.cs">
+      <DependentUpon>ClassworkTeacherClass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentsTeacherClass.aspx.cs">
+      <DependentUpon>StudentsTeacherClass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentsTeacherClass.aspx.designer.cs">
+      <DependentUpon>StudentsTeacherClass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateAssignment.aspx.cs">
+      <DependentUpon>CreateAssignment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateAssignment.aspx.designer.cs">
+      <DependentUpon>CreateAssignment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClassworkAssignmentTeacherClass.aspx.cs">
+      <DependentUpon>ClassworkAssignmentTeacherClass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClassworkAssignmentTeacherClass.aspx.designer.cs">
+      <DependentUpon>ClassworkAssignmentTeacherClass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClassworkStudentsWorkTeacherClass.aspx.cs">
+      <DependentUpon>ClassworkStudentsWorkTeacherClass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClassworkStudentsWorkTeacherClass.aspx.designer.cs">
+      <DependentUpon>ClassworkStudentsWorkTeacherClass.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="Site1.Master" />
+    <Content Include="StudentPanel.Master" />
+    <Content Include="TeacherPanel.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Class.aspx.cs" Inherits="EduTrack.WebForm9" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/StudentPanel.Master" AutoEventWireup="true" CodeBehind="Class.aspx.cs" Inherits="EduTrack.WebForm9" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         .class-name-card {
@@ -7,8 +7,8 @@
         }
 
         .view-more-button {
-            background-color: black;
-            color: white;
+            background-color: white;
+            color: black;
             border: none;
             padding: 10px 20px;
             border-radius: 5px;

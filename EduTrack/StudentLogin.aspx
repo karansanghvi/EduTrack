@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="EduTrack.WebForm4" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/StudentPanel.Master" AutoEventWireup="true" CodeBehind="StudentLogin.aspx.cs" Inherits="EduTrack.WebForm4" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -28,7 +28,7 @@
                     </div>
                 <p class="text-end pt-3">Forgot Password?</p>
                 <asp:Button ID="loginButton" runat="server" CssClass="custom-button" Text="Login" />
-                <p class="text-center pt-5">Don't have an account? <a href="Signup.aspx">Signup</a></p>
+                <p class="text-center pt-5">Don't have an account? <a href="StudentSignup.aspx">Signup</a></p>
             </div>
         </div>
     </div>
