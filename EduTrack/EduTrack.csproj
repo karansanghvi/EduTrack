@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Default.aspx" />
     <Content Include="src\bootstrap\css\bootstrap.min.css" />
     <Content Include="src\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="src\bootstrap\js\bootstrap.min.js" />
@@ -97,6 +98,13 @@
     <Content Include="ClassworkStudentsWorkTeacherClass.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StudentPanel.Master.cs">
       <DependentUpon>StudentPanel.Master</DependentUpon>
