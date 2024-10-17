@@ -41,7 +41,6 @@
          <h1>Class Name</h1>
          <hr />
          <div class="nav-class mb-4">
-             <a class="nav-link" aria-current="page" href="StreamTeacherClass.aspx">Stream</a>
              <a class="nav-link" aria-current="page" href="ClassworkTeacherClass.aspx">Classwork</a>
              <a class="nav-link box" aria-current="page" href="StudentsTeacherClass.aspx">Students</a>
          </div>

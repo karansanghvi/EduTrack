@@ -9,7 +9,7 @@ using EduTrack.CommonClasses;
 
 namespace EduTrack
 {
-    public partial class WebForm4 : System.Web.UI.Page
+    public partial class WebForm19 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
