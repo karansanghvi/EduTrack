@@ -41,9 +41,9 @@ namespace EduTrack
             else
             {
                 string currentPageName = System.IO.Path.GetFileName(Request.Url.AbsolutePath);
-                if (currentPageName != "StudentLogin.aspx")
+                if (currentPageName != "Login.aspx")
                 {
-                    Response.Redirect("StudentLogin.aspx");
+                    Response.Redirect("Login.aspx");
                 }
             }
         }
