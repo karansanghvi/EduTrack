@@ -39,8 +39,14 @@
                         </ul>
                     </div>
 
-                    <div class="d-flex pe-5">
-                        <a href="Login.aspx" class="btn btn-primary">Login</a>
+                    <div class="d-flex pe-5" id="Div_Login" runat="server" visible="true">
+                        <a href="StudentLogin.aspx" class="btn btn-primary">Login</a>
+                    </div>
+                    <div class="d-flex pe-5" id="Div_Admin" runat="server" visible="false">
+                        <a href="StudentLogin.aspx" class="btn btn-primary">Admin</a>
+                    </div>          
+                    <div class="d-flex pe-5" id="Div_Username" runat="server" visible="false">
+                        <a href="StudentLogin.aspx" class="nav-link">User</a>
                     </div>
                 </nav>
           </div>

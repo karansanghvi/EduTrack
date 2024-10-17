@@ -98,6 +98,7 @@
     <Content Include="ClassworkStudentsWorkTeacherClass.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

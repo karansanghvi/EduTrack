@@ -1,0 +1,12 @@
+Login
+Admin add/Edit student
+Admin Add/edit Teacher
+Admin View Logs - Student
+Admin View Logs - Teacher
+Admin View Logs - All
+Add Classes
+Join Classes
+Add Assignments
+Complete Assignments
+Post Assignment Attachments
+Show Completed Classwork for Students
