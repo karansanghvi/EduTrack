@@ -54,14 +54,17 @@ namespace EduTrack
                     loggedIn = false;
                     while (reader.Read())
                     {
-                        loggedIn = true;
-                        Session["name"] = reader["Name"];
-                        Session["id"] = reader["Id"];
-                        Session["email"] = reader["Email"];
-                        Session["admin"] = reader.GetBoolean(reader.GetOrdinal("Admin")) ? 1 : 0;
-                        Session["isTeacher"] = true;
-                        Session["isStudent"] = null;
-                        break;
+                        if (hash == reader["Password"].ToString())
+                        {
+                            loggedIn = true;
+                            Session["name"] = reader["Name"];
+                            Session["id"] = reader["Id"];
+                            Session["email"] = reader["Email"];
+                            Session["admin"] = reader.GetBoolean(reader.GetOrdinal("Admin")) ? 1 : 0;
+                            Session["isTeacher"] = true;
+                            Session["isStudent"] = null;
+                            break;
+                        }
                     }
                 }
 
