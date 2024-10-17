@@ -44,14 +44,20 @@ namespace EduTrack
             string email = GridView1.Rows[e.RowIndex].FindControl("Email").ToString();
 
             //!TODO: Ensure admin cannot delete self
-
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            if(email != "admin@admin.com")
             {
-                string query = "DELETE FROM Users WHERE Email = @email"; 
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@email", email);
-                conn.Open();
-                cmd.ExecuteNonQuery();
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    string query = "DELETE FROM Users WHERE Email = @email";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@email", email);
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            else
+            {
+
             }
 
             BindGridView();
@@ -63,8 +69,10 @@ namespace EduTrack
             if (e.CommandName == "ResetPassword")
             {
                 string email = e.CommandArgument.ToString();
-
-                ResetUserPassword(email);
+                if (email != "admin@admin.com")
+                {
+                    ResetUserPassword(email);
+                }
             }
         }
 
@@ -82,10 +90,19 @@ namespace EduTrack
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand("update teachers set Password = '" + Common.ComputeSha256Hash(randPass) +"' where Email = '" + email +"';");
+                    SqlCommand cmd = new SqlCommand("update teachers set Password = '" + Common.ComputeSha256Hash(randPass) + "' where Email = '" + email + "';");
                     cmd.ExecuteNonQuery();
                 }
             }
+            else
+            {
+
+            }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Signup.aspx?type=Teacher");
         }
     }
 }

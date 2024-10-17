@@ -6,7 +6,7 @@
     <div class="p-2">
         <h1>Edit Teacher Details</h1>
 
-        <asp:Button ID="Button1" runat="server" Text="+ Add New" CssClass=" btn btn-primary" />
+        <asp:Button ID="Button1" runat="server" Text="+ Add New" CssClass=" btn btn-primary" OnClick="Button1_Click" />
 
         <br />
         <br />

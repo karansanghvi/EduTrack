@@ -24,13 +24,13 @@ namespace EduTrack
         protected global::System.Web.UI.WebControls.Image heroBanner;
 
         /// <summary>
-        /// firstNameLabel control.
+        /// NameLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label firstNameLabel;
+        protected global::System.Web.UI.WebControls.Label NameLabel;
 
         /// <summary>
         /// firstName control.
@@ -42,13 +42,13 @@ namespace EduTrack
         protected global::System.Web.UI.WebControls.TextBox firstName;
 
         /// <summary>
-        /// lastNameLabel control.
+        /// idLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lastNameLabel;
+        protected global::System.Web.UI.WebControls.Label idLabel;
 
         /// <summary>
         /// lastName control.
@@ -94,6 +94,33 @@ namespace EduTrack
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox password;
+
+        /// <summary>
+        /// AdminDiv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl AdminDiv;
+
+        /// <summary>
+        /// AdminLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label AdminLabel;
+
+        /// <summary>
+        /// AdminBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox AdminBox;
 
         /// <summary>
         /// signupButton control.

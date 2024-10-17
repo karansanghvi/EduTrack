@@ -18,12 +18,12 @@
                     <h1 class="text-center">Create Account</h1>
                         <div class="row pt-4">
                             <div class="col-sm">
-                                <asp:Label ID="firstNameLabel" runat="server" Text="Enter First Name:"></asp:Label>
+                                <asp:Label ID="NameLabel" runat="server" Text="Enter Name:"></asp:Label>
                                 <br />
                                 <asp:TextBox ID="firstName" runat="server" placeholder="Name" CssClass="custom-textbox"></asp:TextBox>
                             </div>
                             <div class="col-sm">
-                                <asp:Label ID="lastNameLabel" runat="server" Text="Enter Last Name:"></asp:Label>
+                                <asp:Label ID="idLabel" runat="server" Text="Enter ID Number:"></asp:Label>
                                 <br />
                                 <asp:TextBox ID="lastName" runat="server" placeholder="Surname" CssClass="custom-textbox"></asp:TextBox>
                             </div>
@@ -38,6 +38,11 @@
                             <br />
                             <asp:TextBox ID="password" runat="server" placeholder="Password" CssClass="custom-textbox"></asp:TextBox>
                         </div>
+                    <div class="pt-4" runat="server" id="AdminDiv">
+                        <asp:Label ID="AdminLabel" runat="server" Text="Has Admin Access:"></asp:Label>
+                        <br />
+                        <asp:CheckBox ID="AdminBox" runat="server" />
+                    </div>
                     <div class="pt-4">
                         <asp:Button ID="signupButton" runat="server" CssClass="custom-button" Text="Signup" />
                     </div>

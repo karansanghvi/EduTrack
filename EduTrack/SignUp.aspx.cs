@@ -11,7 +11,17 @@ namespace EduTrack
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            string type = Request.QueryString["type"];
+            if(type == "Teacher")
+            {
+                AdminDiv.Visible = true;
+                idLabel.Text = "Enter ID Number";
+            }
+            else
+            {
+                AdminDiv.Visible=false;
+                idLabel.Text = "Enter Roll Number";
+            }
         }
     }
 }
