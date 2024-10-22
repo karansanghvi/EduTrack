@@ -37,7 +37,7 @@ namespace EduTrack
             {
                 if (Session["isStudent"]!=null)
                 {
-                    SqlCommand cmd = new SqlCommand("select Password from students where Email = @email");
+                    SqlCommand cmd = new SqlCommand("select Password from students where Email = @email",con);
                     cmd.Parameters.AddWithValue("@email", Session["email"]);
 
                     try
@@ -54,23 +54,24 @@ namespace EduTrack
                             }
                         }
 
+                        reader.Close();
+
                         if(canChange)
                         {
-                            cmd = new SqlCommand("update students set Password = @pass where Email = @email");
+                            cmd = new SqlCommand("update students set Password = @pass where Email = @email", con);
                             cmd.Parameters.AddWithValue("@email", Session["email"]);
                             cmd.Parameters.AddWithValue("@pass", Common.ComputeSha256Hash(newpass));
                             cmd.ExecuteNonQuery();
-                            
                         }
                     }
                     catch (Exception ex)
                     {
-
+                        Response.Write(ex.Message);
                     }
                 }
                 else if (Session["isTeacher"] != null)
                 {
-                    SqlCommand cmd = new SqlCommand("select Password from teachers where Email = @email");
+                    SqlCommand cmd = new SqlCommand("select Password from teachers where Email = @email", con);
                     cmd.Parameters.AddWithValue("@email", Session["email"]);
 
                     try
@@ -87,9 +88,11 @@ namespace EduTrack
                             }
                         }
 
+                        reader.Close() ;
+
                         if (canChange)
                         {
-                            cmd = new SqlCommand("update teachers set Password = @pass where Email = @email");
+                            cmd = new SqlCommand("update teachers set Password = @pass where Email = @email", con);
                             cmd.Parameters.AddWithValue("@email", Session["email"]);
                             cmd.Parameters.AddWithValue("@pass", Common.ComputeSha256Hash(newpass));
                             cmd.ExecuteNonQuery();
@@ -97,10 +100,17 @@ namespace EduTrack
                     }
                     catch (Exception ex)
                     {
-
+                        Response.Write(ex.Message);
                     }
                 }
             }
+        }
+
+        protected void logoutButton_Click(object sender, EventArgs e)
+        {
+            Session["isTeacher"] = null;
+            Session["isStudent"] = null;
+            Response.Redirect("Login.aspx");
         }
     }
 }

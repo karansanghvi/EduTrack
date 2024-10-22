@@ -60,6 +60,15 @@ namespace EduTrack
         protected global::System.Web.UI.WebControls.Button signupButton;
 
         /// <summary>
+        /// logoutButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button logoutButton;
+
+        /// <summary>
         /// Div_Pass1 control.
         /// </summary>
         /// <remarks>

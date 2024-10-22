@@ -22,6 +22,9 @@
                     <div class="pt-4">
                         <asp:Button ID="signupButton" runat="server" CssClass="custom-button" Text="Change Password" OnClick="signupButton_Click" />
                     </div>
+                    <div class="pt-4">
+                        <asp:Button ID="logoutButton" runat="server" CssClass="custom-button" Text="Logout" OnClick="logoutButton_Click" />
+                    </div>
 
 
                     <div class="pt-4" runat="server" id="Div_Pass1">
