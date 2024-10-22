@@ -22,21 +22,23 @@ namespace EduTrack
                         Div_Admin.Visible = true;
                         Div_Login.Visible = false;
                         Div_Username.Visible = true;
-                        Div_Username.InnerText = Session["name"].ToString();
+                        Div_Username.InnerHtml = "<a href=\"Profile.aspx\" class=\"nav-link\">" + Session["name"].ToString() +"</a>";
                     }
                     else
                     {
                         Div_Admin.Visible = false;
                         Div_Login.Visible = false;
                         Div_Username.Visible = true;
-                        Div_Username.InnerText = Session["name"].ToString();
+                        Div_Username.InnerHtml = "<a href=\"Profile.aspx\" class=\"nav-link\">" + Session["name"].ToString() + "</a>";
                     }
                 }
             }
             else if (Session["isStudent"] != null)
             {
                 Div_Username.Visible = true;
-                Div_Username.InnerText = Session["name"].ToString();
+                Div_Login.Visible = false;
+                Div_Admin.Visible = false;
+                Div_Username.InnerHtml = "<a href=\"Profile.aspx\" class=\"nav-link\">" + Session["name"].ToString() + "</a>";
             }
             else
             {

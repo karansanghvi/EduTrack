@@ -8,39 +8,34 @@
         <div class="container pt-5">
             <div class="row">
                 <div class="col-sm">
-                    <div class="row">
-                        <div class="col-sm">
-                            <asp:Label ID="firstNameLabel" runat="server" Text="First Name:"></asp:Label>
-                            <br />
-                            <asp:TextBox ID="firstName" runat="server" placeholder="Name" CssClass="custom-textbox"></asp:TextBox>
-                        </div>
-                        <div class="col-sm">
-                            <asp:Label ID="lastNameLabel" runat="server" Text="Last Name:"></asp:Label>
-                            <br />
-                            <asp:TextBox ID="lastName" runat="server" placeholder="Surname" CssClass="custom-textbox"></asp:TextBox>
-                        </div>
+                    
+                    <div class="pt-4">
+                        <asp:Label ID="firstNameLabel" runat="server" Text="Name:"></asp:Label>
+                        <br />
+                        <asp:TextBox ID="firstName" runat="server" Enabled="false" placeholder="Name" CssClass="custom-textbox"></asp:TextBox>
                     </div>
                     <div class="pt-4">
                         <asp:Label ID="emailAddressLabel" runat="server" Text="Email Address:"></asp:Label>
                         <br />
-                        <asp:TextBox ID="emailAddress" runat="server" placeholder="Email" CssClass="custom-textbox"></asp:TextBox>
+                        <asp:TextBox ID="emailAddress" Enabled="false" runat="server" placeholder="Email" CssClass="custom-textbox"></asp:TextBox>
                     </div>
                     <div class="pt-4">
-                        <asp:Label ID="passwordLabel" runat="server" Text="Password:"></asp:Label>
+                        <asp:Button ID="signupButton" runat="server" CssClass="custom-button" Text="Change Password" OnClick="signupButton_Click" />
+                    </div>
+
+
+                    <div class="pt-4" runat="server" id="Div_Pass1">
+                        <asp:Label ID="passwordLabel" runat="server" Text="Current Password:"></asp:Label>
                         <br />
                         <asp:TextBox ID="password" runat="server" placeholder="Password" CssClass="custom-textbox"></asp:TextBox>
                     </div>
-                    <div class="pt-4">
-                        <asp:Button ID="signupButton" runat="server" CssClass="custom-button" Text="Edit Profile" />
+                    <div class="pt-4" runat="server" id="Div_Pass2"> 
+                        <asp:Label ID="newPasswordLabel" runat="server" Text="New Password:"></asp:Label>
+                        <br />
+                        <asp:TextBox ID="newPassword" runat="server" placeholder="Password" CssClass="custom-textbox"></asp:TextBox>
                     </div>
-                </div>
-               
-                <div class="col-sm ps-5">
-                    <h3>Completed Assignments:</h3>
-                    <div class="feature-card p-3">
-                        <p style="color: white;">Course Name</p>
-                        <h3 style="color: black;">Experiment Name</h3>
-                        <p style="color: #D9D9D9;">Grade: 25/25</p>
+                    <div class="pt-4" runat="server" id="Div_Pass3"> 
+                        <asp:Button ID="ResetBtn" runat="server" CssClass="custom-button" Text="Change" OnClick="ResetBtn_Click" />
                     </div>
                 </div>
             </div>

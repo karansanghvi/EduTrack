@@ -46,7 +46,7 @@
                         <a href="AdminPanel.aspx" class="btn btn-primary">Admin Panel</a>
                     </div>          
                     <div class="d-flex pe-5" id="Div_Username" runat="server" visible="false">
-                        <a href="#" class="nav-link">User</a>
+                        <a href="Profile.aspx" class="nav-link">User</a>
                     </div>
                 </nav>
           </div>
