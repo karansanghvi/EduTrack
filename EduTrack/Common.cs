@@ -8,6 +8,13 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Web;
 using System.Web.UI;
+using MimeKit;
+using Google.Apis.Auth.OAuth2;
+using Google.Apis.Gmail.v1;
+using Google.Apis.Gmail.v1.Data;
+using Google.Apis.Services;
+using System.Threading;
+using Google.Apis.Util.Store;
 
 namespace EduTrack.CommonClasses
 {
@@ -100,40 +107,43 @@ namespace EduTrack.CommonClasses
 
             return result.ToString();
         }
+        //sssy uvby ngyg tnzm
+
 
         public static bool SendEmail(string emailContent, string emailSubject, string toEmail, string fromEmail, string password)
-        {
-            System.Net.Mail.MailMessage mail = new System.Net.Mail.MailMessage();
-            mail.To.Add(toEmail);
-            mail.From = new MailAddress(fromEmail, "Email head", System.Text.Encoding.UTF8);
-            mail.Subject = emailSubject;
-            mail.SubjectEncoding = System.Text.Encoding.UTF8;
-            mail.Body = emailContent;
-            mail.BodyEncoding = System.Text.Encoding.UTF8;
-            mail.IsBodyHtml = true;
-            mail.Priority = MailPriority.High;
-            SmtpClient client = new SmtpClient();
-            string actualPass = TripleDESDecrypt(password);
-            client.Credentials = new System.Net.NetworkCredential(fromEmail, actualPass);
-            client.Port = 587;
-            client.Host = "smtp.gmail.com";
-            client.EnableSsl = true;
-            try
+         {
+             try
             {
-                client.Send(mail);
+                MailMessage mail = new MailMessage();
+                mail.From = new MailAddress(toEmail); // Sender's email
+                mail.To.Add(toEmail); // Recipient's email
+                mail.Subject = emailSubject; // Subject
+                mail.Body = emailContent; // Body
+                mail.IsBodyHtml = false; // Set to true if you are sending HTML content
+
+                using (SmtpClient smtp = new SmtpClient())
+                {
+                    smtp.Host = "smtp.gmail.com"; // SMTP server for Gmail
+                    smtp.Port = 587; // SMTP port
+                    smtp.Credentials = new System.Net.NetworkCredential("edutrack4@gmail.com", "sssy uvby ngyg tnzm");
+                    smtp.EnableSsl = true; // Enable SSL
+
+                    smtp.Send(mail); // Send the email
+                }
+
+                Console.Write("Email sent successfully!");
                 return true;
             }
             catch (Exception ex)
             {
-                Exception ex2 = ex;
-                string errorMessage = string.Empty;
-                while (ex2 != null)
-                {
-                    errorMessage += ex2.ToString();
-                    ex2 = ex2.InnerException;
-                }
+                Console.Write("Error sending email: " + ex.Message);
                 return false;
             }
+         }
+        private static string Base64UrlEncode(string input)
+        {
+            return Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(input))
+                .Replace("+", "-").Replace("/", "_").Replace("=", "");
         }
     }
 }

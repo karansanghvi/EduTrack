@@ -15,7 +15,7 @@
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
             OnRowDeleting="GridView1_RowDeleting" 
             OnRowCommand="GridView1_RowCommand" 
-            DataKeyNames="ID" 
+            DataKeyNames="ID, Email" 
             ShowHeaderWhenEmpty="True"
             CssClass="table table-striped table-bordered">
     

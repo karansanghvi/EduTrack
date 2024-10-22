@@ -41,14 +41,15 @@ namespace EduTrack
 
         protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            string email = GridView1.Rows[e.RowIndex].FindControl("Email").ToString();
+            int rowIndex = e.RowIndex;
+            string email = GridView1.DataKeys[rowIndex].Values["Email"].ToString();
 
-            //!TODO: Ensure admin cannot delete self
-            if(email != "admin@admin.com")
+
+            if (email != "admin@admin.com")
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    string query = "DELETE FROM Users WHERE Email = @email";
+                    string query = "delete from teachers where Email = @email";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@email", email);
                     conn.Open();
@@ -65,7 +66,6 @@ namespace EduTrack
 
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            //!TODO: Ensure admin cannot reset self
             if (e.CommandName == "ResetPassword")
             {
                 string email = e.CommandArgument.ToString();
@@ -79,7 +79,7 @@ namespace EduTrack
         private void ResetUserPassword(string email)
         {
             string randPass = Common.GenerateRandomString(8);
-            string emailContent = "Your Edutrack Password has been reset by admin. You can use the password: " + randPass + "to login to your account. Please be sure to change the password once you have logged in.";
+            string emailContent = "Your Edutrack Password has been reset by Admin. You can use the password: " + randPass + "to login to your account. Please be sure to change the password once you have logged in.";
             string emailSubject = "Your Edutrack Password has been reset";
             string toEmail = email;
             string fromEmail = "edutrack4@gmail.com";

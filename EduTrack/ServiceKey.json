@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "edutrack-439312",
+  "private_key_id": "75867d640cd8f15e10a11b760074987e169f598c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCioG4oY+YuqO3H\n8TQDkdy7ttrAalVBvvLcMbTQoSre4/MlREUZWsq88rLhoxadW4iEURUUMPFgGJCH\nXO9eW16y4iihsVuqkcFNXRQAPdE4TcNSJTYAmrkOCaOiGCdQLUpvN5+c/WXXpvx1\nykQH7fESQkGUgG31odxZo3gYfCbOg/BYW120vtyHisQwMdZJ5eIcIxHJ/SeFbaYE\nkHLw5O4NW4AmmrTW1fBXz3IjeCDuEKY3zjF+wHQyMdwJhsYMjOhLAe7ykXTLNczE\nsYNPGW/hlzF59BdOxecpf/5gD5B4z+XusBkF12iXfKUlLqzyJKDjDfA/U9wI+50W\nyQKBkGMBAgMBAAECggEAD/IfGwLAnS6fMg2qhfcVZ6qERH2oomuwsHqHOjWzWGuN\necf55oSKgIBjndA59W/2MNMqd/JcmImQElXAesYGwQ9/4GrdjBoClC1eOq/VBepK\nDpHre5+wKXo0ez5XDHuEYudXVTNbewu6kWolxYlFK/8nIwJ8xar7SibHLc9ulq0c\n9tcKyFdn+SEnuhiU7//erfIvjleg2/d3UwD5fiOfrnEcB6lYwXLY8S8fEDw3Jjnv\n+Y9ohc5vhG6cn+iV2T6IlUXtAWsZn3hK+F5xsyrROKZGembcAFz4bheirwgFLaUd\nGyUIKGPc009cfmcu28DIheLjuPmW8VZFVEbAvkJ26QKBgQDicPoPZCKgkmZ3/K06\nI7k8LJHt4EQ921SRK6Vbz704ehJcLJSpJ9hmYuDLwFtRXskn1rCfeketBm2Htu/t\n1m1HrtCj2KwGLAM+pxaMH1mKqpTPSfCoLWQnN5k03amXwjyyleyDc6FOMa3BBKvu\ndoDEq+u98odvyeibNr/3XND1lwKBgQC32vNJt9z/nwvh8V/Wh1jr0bvJdZY0p+8K\nZBnXL0sDVjjeJkTQX2jY6ixjpN/NoT4p3OCdXN/TkN76lhtGurCQwyJNmOVkAJC3\nCvwCMoSFYrEmAUUSQj/bEnyMNjMhM7wf0NSprC9cpERXgfe9AvHaMmBcDkevdM6y\nvBkY94XvJwKBgQCTBxpGjhUxv31LIUR1AKcQnDvwgXKt21DQpc9Litpo5lIviT7J\niram3ELr6S0h63KfLHYoRqRtg0PxH+Yvvs/cAHU2PcSMiV1d++3W87AXKmVPJspc\n2IQ0NpSCz/6DLDpvFouoWpb9B6KzNk5Qmp9Hk/2Qqv4npqkixuzkN17yZwKBgG/I\nWX8KoP1yD+FxxhlC9Vd7jzcvnQGq0PV6YxOoF22R8MVwcwpV2AN6bT6wMbpuPMNr\nHc3Pd+7D+C5XMYJRY6TAX4zaVy30AgioTwxu9o+6r4Yx43L0gKqLlNoS4gdf0xNs\n/r+ihrFG1p510NBEiBNn6ZpOvFr7I+kb4A6EABSlAoGAJhj8jvx1m5g4XOiUt/BO\ngnfyZ+4PMgz7SIbUxRAa5udEwf1XHmiaEZNfjuzNc+pZOmOxQGNZhs288chX1CVS\nUrzFiJfyjBmxy2jXvIwU8JCzgClduTLBd2Z1wnvKtQgdm3YTGrdsJgHHY2xYxaIc\nz04GO/N8r01CHX5+dqSaJGg=\n-----END PRIVATE KEY-----\n",
+  "client_email": "no-reply@edutrack-439312.iam.gserviceaccount.com",
+  "client_id": "115292073715075618328",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/no-reply%40edutrack-439312.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

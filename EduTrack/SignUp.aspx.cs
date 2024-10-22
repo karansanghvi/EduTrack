@@ -1,17 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Xml.Linq;
 
 namespace EduTrack
 {
     public partial class WebForm5 : System.Web.UI.Page
     {
+        string type;
         protected void Page_Load(object sender, EventArgs e)
         {
-            string type = Request.QueryString["type"];
+            type = Request.QueryString["type"];
+
+            if (Session["isTeacher"]==null)
+            {
+                Session["isStudent"] = null;
+                Response.Redirect("Login.aspx");
+            }
+
+            
             if(type == "Teacher")
             {
                 AdminDiv.Visible = true;
@@ -21,6 +32,35 @@ namespace EduTrack
             {
                 AdminDiv.Visible=false;
                 idLabel.Text = "Enter Roll Number";
+            }
+        }
+
+        protected void signupButton_Click(object sender, EventArgs e)
+        {
+            string name = firstName.Text;
+            string id = TB_id.Text;
+            string email = emailAddress.Text;
+            string passwordTxt = password.Text;
+            bool isAdmin = AdminBox.Checked;
+
+            using(SqlConnection con = new SqlConnection("data source=.\\SQLEXPRESS; database=EduTrack; integrated security=SSPI"))
+            {
+                SqlCommand cmd = new SqlCommand("insert into teachers (Name, Email, Id, Password, Admin) values (@Name, @Email, @Id, @Password, @Admin)", con);
+                cmd.Parameters.AddWithValue("@Name", name);
+                cmd.Parameters.AddWithValue("@Email", email);
+                cmd.Parameters.AddWithValue("@Id", id);
+                cmd.Parameters.AddWithValue("@Password", passwordTxt);
+                cmd.Parameters.AddWithValue("@Admin", isAdmin);
+
+                try
+                {
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    Response.Redirect("EditTeacher.aspx");
+                }
+                catch (Exception ex)
+                {
+                }
             }
         }
     }

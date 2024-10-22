@@ -51,13 +51,13 @@ namespace EduTrack
         protected global::System.Web.UI.WebControls.Label idLabel;
 
         /// <summary>
-        /// lastName control.
+        /// TB_id control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox lastName;
+        protected global::System.Web.UI.WebControls.TextBox TB_id;
 
         /// <summary>
         /// emailAddressLabel control.

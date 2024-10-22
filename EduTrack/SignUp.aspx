@@ -25,7 +25,7 @@
                             <div class="col-sm">
                                 <asp:Label ID="idLabel" runat="server" Text="Enter ID Number:"></asp:Label>
                                 <br />
-                                <asp:TextBox ID="lastName" runat="server" placeholder="Surname" CssClass="custom-textbox"></asp:TextBox>
+                                <asp:TextBox ID="TB_id" runat="server" placeholder="ID" CssClass="custom-textbox"></asp:TextBox>
                             </div>
                         </div>
                         <div class="pt-4">
@@ -40,11 +40,10 @@
                         </div>
                     <div class="pt-4" runat="server" id="AdminDiv">
                         <asp:Label ID="AdminLabel" runat="server" Text="Has Admin Access:"></asp:Label>
-                        <br />
-                        <asp:CheckBox ID="AdminBox" runat="server" />
+                        <asp:CheckBox ID="AdminBox" runat="server" /> 
                     </div>
                     <div class="pt-4">
-                        <asp:Button ID="signupButton" runat="server" CssClass="custom-button" Text="Signup" />
+                        <asp:Button ID="signupButton" OnClick="signupButton_Click" runat="server" CssClass="custom-button" Text="Signup" />
                     </div>
                     <p class="text-center pt-5">Already have an account? <a href="StudentLogin.aspx">Login</a></p>
                 </div>
