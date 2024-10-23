@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TeacherPanel.Master" AutoEventWireup="true" CodeBehind="ClassworkTeacherClass.aspx.cs" Inherits="EduTrack.WebForm14" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/StudentPanel.Master" AutoEventWireup="true" CodeBehind="ClassworkTeacherClass.aspx.cs" Inherits="EduTrack.WebForm141" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         .nav-class {
@@ -41,9 +41,9 @@
         <div class="container">
             <div class="row" style="gap: 500px;">
                 <div class="col-sm">
-                    <h1 runat="server" id="ClassName">Class Name</h1>
+                    <h1 runat="server" id="ClassNameHeader">Class Name</h1>
                     <br />
-                    Class Code: <div>code12</div>
+                    Class Code: <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
                 </div>
                 <div class="col-sm">
                     <asp:Button 
@@ -63,13 +63,14 @@
             <ItemTemplate>
                 <div class="feature-card p-3 ">
                     <div class="flex-container">
-                        <h3>Experiment Name</h3>
+                        <h3><%# Eval("Title") %></h3>
                         <asp:Button 
                             ID="viewMore" 
                             runat="server" 
                             CssClass="view-more-button" 
                             Text="View More" 
                             OnClick="viewClasswork_Click"
+                            CommandArgument ='<%# Eval("Id") %>'
                             />
                     </div>
                 </div>

@@ -33,6 +33,7 @@ namespace EduTrack
                 {
                     Repeater1.DataSource = dt;
                     Repeater1.DataBind();
+                    Repeater1.Visible = true;
                 }
                 else
                 {
@@ -68,6 +69,8 @@ namespace EduTrack
         {
             Button clickedBtn = sender as Button;
             string id = clickedBtn.CommandArgument;
+            string name = clickedBtn.CommandName;
+            Response.Redirect("ClassworkTeacherClass.aspx?id=" + id + "&name=" + name);
         }
     }
 }

@@ -62,6 +62,7 @@
                                     CssClass="view-more-button mx-auto d-block" 
                                     OnClick="ViewClass_Click"
                                     CommandArgument ='<%# Eval("ID") %>'
+                                    CommandName ='<%# Eval("Name") %>'
                                     />
                             </div>
                         </div>

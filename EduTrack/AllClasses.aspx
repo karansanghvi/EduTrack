@@ -42,22 +42,32 @@
             </div>
         </div>
         <hr />
-        <div style="background-color: #D9D9D9; border-radius: 10px;" class="p-4 flex-container">
-            <h2 style="font-size: 30px;" class="text-button-gap">C# And .NET</h2>
-            <asp:Button 
-                ID="viewMore1" 
-                runat="server" 
-                CssClass="view-more-button" 
-                Text="View More" 
-                OnClick="viewMore_Click"
-                />
-        </div>
-        <br />
-        <div style="background-color: #D9D9D9; border-radius: 10px;" class="p-4 flex-container">
-            <h2 style="font-size: 30px;" class="text-button-gap">Python Programming</h2>
-            <asp:Button ID="Button2" runat="server" Text="View More" CssClass="view-more-button" />
-        </div>
-    </div>
+        <asp:Repeater ID="Repeater1" runat="server">
+            <ItemTemplate>
+                <div style="background-color: #D9D9D9; border-radius: 10px;" class="p-4 flex-container">
+                    <h2 style="font-size: 30px;" class="text-button-gap">Due: <%# Eval("Name") %></h2>
+                    <asp:Button 
+                        ID="viewMore1" 
+                        runat="server" 
+                        CssClass="view-more-button" 
+                        Text="View More" 
+                        OnClick="viewMore_Click"
+                        CommandArgument ='<%# Eval("ID") %>'
+                        CommandName ='<%# Eval("Name") %>'
+                        />
+
+                    <asp:Button 
+                        ID="LeaveBtn" 
+                        runat="server" 
+                        CssClass="view-more-button" 
+                        Text="Leave Class" 
+                        OnClick="LeaveBtn_Click"
+                        CommandArgument ='<%# Eval("ID") %>'
+                        />
+                </div>
+                <br />
+            </ItemTemplate>
+        </asp:Repeater>
 
     <div></div>
 </asp:Content>

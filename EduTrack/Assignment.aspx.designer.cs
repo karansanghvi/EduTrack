@@ -15,6 +15,33 @@ namespace EduTrack
     {
 
         /// <summary>
+        /// P_CourseName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl P_CourseName;
+
+        /// <summary>
+        /// h1_ExperimentName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl h1_ExperimentName;
+
+        /// <summary>
+        /// P_TotalMarks control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl P_TotalMarks;
+
+        /// <summary>
         /// ExpDesc control.
         /// </summary>
         /// <remarks>
@@ -40,5 +67,14 @@ namespace EduTrack
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button upload;
+
+        /// <summary>
+        /// P_Score control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl P_Score;
     }
 }

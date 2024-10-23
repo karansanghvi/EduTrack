@@ -11,17 +11,26 @@ namespace EduTrack
 {
 
 
-    public partial class WebForm14
+    public partial class WebForm141
     {
 
         /// <summary>
-        /// ClassName control.
+        /// ClassNameHeader control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ClassName;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ClassNameHeader;
+
+        /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
         /// createAssignmentButton control.

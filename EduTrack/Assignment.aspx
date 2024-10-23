@@ -29,11 +29,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="p-5">
-        <p class="description">Course Name</p>
-        <h1>Experiment Name</h1>
+        <p class="description" id="P_CourseName" runat="server">Course Name</p>
+        <h1 id="h1_ExperimentName" runat="server">Experiment Name</h1>
         <div class="flex-container">
-            <p class="description">25 points</p>
-            <p class="description">Due 11th August</p>
+            <p class="description" id="P_TotalMarks" runat="server">25 points</p>
+            <p class="description"id="P_Due" runat="server">Due 11th August</p>
         </div>
         <hr />
 
@@ -47,7 +47,7 @@
                     <div class="p-3 work-card">
                         <h3>Your Work</h3>
                         <div style="border: 1px solid #ccc; border-radius: 10px;" class="p-3">
-                            <asp:TextBox ID="TextBox1" runat="server" Text="Google Drive Link" class="custom-textbox" ></asp:TextBox>
+                            <asp:TextBox ID="TextBox1" runat="server" placeholder="Google Drive Link" class="custom-textbox" ></asp:TextBox>
                         </div>
                         <br />
                         <asp:Button ID="upload" runat="server" Text="Upload File" CssClass="custom-button" />
@@ -56,7 +56,7 @@
                     <div class="p-3 work-card">
                         <h3>Your Grade</h3>
                         <div style="border: 1px solid #ccc; border-radius: 10px;" class="p-3">
-                            <p class="description">25/25</p>
+                            <p class="description" runat="server" id="P_Score">25/25</p>
                         </div>
                     </div>
                 </div>

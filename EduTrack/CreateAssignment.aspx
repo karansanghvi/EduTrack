@@ -57,15 +57,6 @@
 
         <br /> 
 
-        <div class="box p-4">
-            <p>Attach Documents:</p>
-            <div class="uploaded-doc">
-                <p>this is a doc</p>
-            </div>
-            <br />
-            <asp:Button ID="Button3" runat="server" Text="Upload Document" CssClass="custom-button" />
-        </div>
-
         <br />
 
         <div class="box p-4">
@@ -76,8 +67,8 @@
                         <asp:TextBox ID="pointsText" runat="server" Text="Points" CssClass="custom-textbox"></asp:TextBox>
                     </div>
                     <div class="col-sm">
-                    <asp:Label ID="dueDateLabel" runat="server">Enter Due Date:</asp:Label>
-                    <asp:TextBox ID="dueDate" runat="server" Text="Date" CssClass="custom-textbox"></asp:TextBox>
+                        <asp:Label ID="dueDateLabel" runat="server">Enter Due Date:</asp:Label>
+                        <asp:TextBox ID="dueDate" runat="server" TextMode="Date" CssClass="custom-textbox"></asp:TextBox>
                 </div>
                 </div>
             </div>
@@ -92,7 +83,7 @@
                 Text="Cancel" 
                 CssClass="cancel-button" 
                 />
-            <asp:Button ID="Button1" runat="server" Text="Create Assignment" CssClass="create-button" />
+            <asp:Button ID="Button1" runat="server" Text="Create Assignment" CssClass="create-button" OnClick="Button1_Click" />
         </div>
     </div>
 </asp:Content>
