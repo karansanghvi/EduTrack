@@ -1,12 +1,9 @@
 Login
 Admin add/Edit student
 Admin Add/edit Teacher
-Admin View Logs - Student
-Admin View Logs - Teacher
-Admin View Logs - All
+Reset Teacher/Student Password
 Add Classes
 Join Classes
 Add Assignments
 Complete Assignments
-Post Assignment Attachments
-Show Completed Classwork for Students
+View Current and Completed Assignments

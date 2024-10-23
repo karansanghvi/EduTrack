@@ -9,7 +9,7 @@
                     <h1 style="font-size: 60px;">Empower Your</h1>
                     <h1 style="font-size: 50px;">Learning Journey</h1>
                     <p>Where Students and Teachers Connect </p>
-                    <a href="Classes.aspx" class="btn btn-primary">Go To Classes</a>
+                    <asp:Button ID="ClassConnect" runat="server" OnClick="ClassConnect_Click" CssClass="btn btn-primary" Text="View Classes" />
                 </div>
                 <div class="col-sm pt-5">
                     <asp:Image 

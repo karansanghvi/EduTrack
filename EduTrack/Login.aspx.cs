@@ -69,7 +69,7 @@ namespace EduTrack
 
                 if (loggedIn && Session["isTeacher"] != null)
                 {
-                    Response.Redirect("TeacherHomePage.aspx");
+                    Response.Redirect("HomePage.aspx");
                 }
                 else if (loggedIn && Session["isStudent"] != null)
                 {
