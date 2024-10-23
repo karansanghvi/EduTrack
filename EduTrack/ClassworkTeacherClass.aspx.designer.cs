@@ -15,6 +15,15 @@ namespace EduTrack
     {
 
         /// <summary>
+        /// ClassName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ClassName;
+
+        /// <summary>
         /// createAssignmentButton control.
         /// </summary>
         /// <remarks>
@@ -24,12 +33,12 @@ namespace EduTrack
         protected global::System.Web.UI.WebControls.Button createAssignmentButton;
 
         /// <summary>
-        /// viewMore control.
+        /// Repeater1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button viewMore;
+        protected global::System.Web.UI.WebControls.Repeater Repeater1;
     }
 }

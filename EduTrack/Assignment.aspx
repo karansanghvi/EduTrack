@@ -30,14 +30,14 @@
         <div class="container">
             <div class="row gap-5">
                 <div class="col-sm p-3 assignment-card">
-                    <h3>Reference Documents:</h3>
-                    <p class="description">Download this reference document</p>
+                    <h3>Experiment Description</h3>
+                    <p class="description" id="ExpDesc" runat="server"></p>
                 </div>
                 <div class="col-sm">
                     <div class="p-3 work-card">
                         <h3>Your Work</h3>
                         <div style="border: 1px solid #ccc; border-radius: 10px;" class="p-3">
-                            <h6>Submit Here</h6>
+                            <asp:TextBox ID="TextBox1" runat="server" Text="Google Drive Link" ></asp:TextBox>
                         </div>
                         <br />
                         <asp:Button ID="upload" runat="server" Text="Upload File" CssClass="custom-button" />

@@ -41,7 +41,6 @@
                     <div class="pt-4">
                         <asp:Button ID="signupButton" runat="server" CssClass="custom-button" Text="Signup" />
                     </div>
-                    <p class="text-center pt-5">Already have an account? <a href="TeacherLogin.aspx">Login</a></p>
                 </div>
             </div>
         </div>

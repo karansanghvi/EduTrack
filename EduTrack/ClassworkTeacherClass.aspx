@@ -41,7 +41,7 @@
         <div class="container">
             <div class="row" style="gap: 500px;">
                 <div class="col-sm">
-                    <h1>Class Name</h1>
+                    <h1 runat="server" id="ClassName">Class Name</h1>
                     <br />
                     Class Code: <div>code12</div>
                 </div>
@@ -59,17 +59,25 @@
         <hr />
 
         <h2>Classwork</h2>
-        <div class="feature-card p-3">
-            <div class="flex-container">
-                <h3>Experiment Name</h3>
-                <asp:Button 
-                    ID="viewMore" 
-                    runat="server" 
-                    CssClass="view-more-button" 
-                    Text="View More" 
-                    OnClick="viewClasswork_Click"
-                    />
-            </div>
-        </div>
+        <asp:Repeater ID="Repeater1" runat="server">
+            <ItemTemplate>
+                <div class="feature-card p-3 ">
+                    <div class="flex-container">
+                        <h3>Experiment Name</h3>
+                        <asp:Button 
+                            ID="viewMore" 
+                            runat="server" 
+                            CssClass="view-more-button" 
+                            Text="View More" 
+                            OnClick="viewClasswork_Click"
+                            />
+                    </div>
+                </div>
+                <br />
+             </ItemTemplate>
+        </asp:Repeater>
+
+
+
     </div>
 </asp:Content>

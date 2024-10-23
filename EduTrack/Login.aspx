@@ -28,7 +28,6 @@
                 </div>
             <p class="text-end pt-3">Forgot Password?</p>
             <asp:Button ID="loginButton" runat="server" CssClass="custom-button" Text="Login" OnClick="loginButton_Click" />
-            <p class="text-center pt-5">Don't have an account? <a href="TeacherSignup.aspx">Signup</a></p>
         </div>
     </div>
 </div>
