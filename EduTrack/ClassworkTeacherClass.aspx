@@ -42,6 +42,8 @@
             <div class="row" style="gap: 500px;">
                 <div class="col-sm">
                     <h1>Class Name</h1>
+                    <br />
+                    Class Code: <div>code12</div>
                 </div>
                 <div class="col-sm">
                     <asp:Button 
@@ -55,10 +57,7 @@
             </div>
         </div>
         <hr />
-        <div class="nav-class mb-4">
-            <a class="nav-link box" aria-current="page" href="ClassworkTeacherClass.aspx">Classwork</a>
-            <a class="nav-link" aria-current="page" href="StudentsTeacherClass.aspx">Students</a>
-        </div>
+
         <h2>Classwork</h2>
         <div class="feature-card p-3">
             <div class="flex-container">

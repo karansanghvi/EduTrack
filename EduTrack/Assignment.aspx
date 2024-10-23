@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/StudentPlanel.Master" AutoEventWireup="true" CodeBehind="Assignment.aspx.cs" Inherits="EduTrack.WebForm2" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/StudentPanel.Master" AutoEventWireup="true" CodeBehind="Assignment.aspx.cs" Inherits="EduTrack.WebForm2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         .flex-container {

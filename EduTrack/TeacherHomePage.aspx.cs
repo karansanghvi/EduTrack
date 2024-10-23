@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using EduTrack.CommonClasses;
 
 namespace EduTrack
 {
@@ -11,7 +14,32 @@ namespace EduTrack
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(!IsPostBack)
+            {
+                BindRepeater();
+            }
+        }
 
+        private void BindRepeater()
+        {
+            using (SqlConnection con = new SqlConnection(Common.connectionString))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("select Name, ID from Courses", con);
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                if (dt.Rows.Count > 0)
+                {
+                    Repeater1.DataSource = dt;
+                    Repeater1.DataBind();
+                }
+                else
+                {
+                    Repeater1.Visible = false;
+                }
+
+            }
         }
 
         protected void createClass_Click(object sender, EventArgs e)
@@ -19,9 +47,27 @@ namespace EduTrack
             Response.Redirect("CreateClass.aspx");
         }
 
-        protected void viewTeacherClass_Click(object sender, EventArgs e)
+        protected void Remove_Click(object sender, EventArgs e)
         {
-            Response.Redirect("StreamTeacherClass.aspx");
+            Button clickedBtn = sender as Button;
+            string id = clickedBtn.CommandArgument;
+            using(SqlConnection con = new SqlConnection(Common.connectionString))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("delete from Courses where ID = @id",con);
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.ExecuteNonQuery();
+                cmd = new SqlCommand("delete from Assignments where CourseId = @cid",con);
+                cmd.Parameters.AddWithValue("@cid", id);
+                cmd.ExecuteNonQuery();
+            }
+            BindRepeater();
+        }
+
+        protected void ViewClass_Click(object sender, EventArgs e)
+        {
+            Button clickedBtn = sender as Button;
+            string id = clickedBtn.CommandArgument;
         }
     }
 }

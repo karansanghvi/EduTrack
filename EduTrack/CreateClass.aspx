@@ -50,7 +50,7 @@
                     Text="Cancel" 
                     CssClass="cancel-button" 
                     />
-                <asp:Button ID="Button1" runat="server" Text="Create Class" CssClass="create-button" />
+                <asp:Button ID="Button1" runat="server" Text="Create Class" OnClick="Button1_Click" CssClass="create-button" />
             </div>
         </div>
     </div>

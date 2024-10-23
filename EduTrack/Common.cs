@@ -20,6 +20,7 @@ namespace EduTrack.CommonClasses
 {
     public class Common
     {
+        public static string connectionString = "data source=.\\SQLEXPRESS; database=EduTrack; integrated security=SSPI";
         //Pass 9ejYRgXKOV21rl488jJlidfazeDqA5UP
 
         private static readonly byte[] Key = Encoding.UTF8.GetBytes("Xy9hG3vPzT4kL1sM2nQ8jR6d");  

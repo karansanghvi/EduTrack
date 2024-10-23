@@ -40,91 +40,33 @@
             />
         <br /> <br />
         <div class="container centered-content">
-            <div class="row gap-5">
-                <div class="col-sm feature-card p-5">
-                    <h2 class="text-center fw-bold" style="color: black;">Class Name</h2>
-                    <br />
-                    <div class="flex-container">
-                        <asp:Button 
-                            ID="viewButton1" 
-                            runat="server" 
-                            Text="Remove" 
-                            CssClass="view-more-button mx-auto d-block" 
-                            OnClick="viewTeacherClass_Click"
-                            />
-                        <asp:Button 
-                            ID="Button4" 
-                            runat="server" 
-                            Text="View" 
-                            CssClass="view-more-button mx-auto d-block" 
-                            OnClick="viewTeacherClass_Click"
-                            />
-                    </div>
-                </div>
-                <div class="col-sm feature-card p-5">
-                    <h2 class="text-center fw-bold" style="color: black;">Class Name</h2>
-                    <br />
-                    <div class="flex-container">
-                        <asp:Button 
-                            ID="Button1" 
-                            runat="server" 
-                            Text="Remove" 
-                            CssClass="view-more-button mx-auto d-block" 
-                            OnClick="viewTeacherClass_Click"
-                            />
-                        <asp:Button 
-                            ID="Button5" 
-                            runat="server" 
-                            Text="View" 
-                            CssClass="view-more-button mx-auto d-block" 
-                            OnClick="viewTeacherClass_Click"
-                            />
-                    </div>
-                </div>
-            </div>
-
-            <div class="row gap-5 pt-5">
-                <div class="col-sm feature-card p-5">
-                    <h2 class="text-center fw-bold" style="color: black;">Class Name</h2>
-                    <br />
-                    <div class="flex-container">
-                        <asp:Button 
-                            ID="Button2" 
-                            runat="server" 
-                            Text="Remove" 
-                            CssClass="view-more-button mx-auto d-block" 
-                            OnClick="viewTeacherClass_Click"
-                            />
-                        <asp:Button 
-                            ID="Button6" 
-                            runat="server" 
-                            Text="View" 
-                            CssClass="view-more-button mx-auto d-block" 
-                            OnClick="viewTeacherClass_Click"
-                            />
-                    </div>
-                </div>
-                <div class="col-sm feature-card p-5">
-                    <h2 class="text-center fw-bold" style="color: black;">Class Name</h2>
-                    <br />
-                    <div class="flex-container">
-                        <asp:Button 
-                            ID="Button3" 
-                            runat="server" 
-                            Text="Remove" 
-                            CssClass="view-more-button mx-auto d-block" 
-                            OnClick="viewTeacherClass_Click"
-                            />
-                        <asp:Button 
-                            ID="Button7" 
-                            runat="server" 
-                            Text="View" 
-                            CssClass="view-more-button mx-auto d-block" 
-                            OnClick="viewTeacherClass_Click"
-                            />
-                    </div>
-                </div>
-            </div>
-        </div>
+            <asp:Repeater ID="Repeater1" runat="server">
+                <ItemTemplate>
+                       <div class="col-md-6 feature-card p-5">
+                            <h2 class="text-center fw-bold" style="color: black;"><%# Eval("Name") %></h2>
+                            <br />
+                            <div class="flex-container">
+                                <asp:Button 
+                                    ID="viewButton1" 
+                                    runat="server" 
+                                    Text="Remove" 
+                                    CssClass="view-more-button mx-auto d-block" 
+                                    OnClick="Remove_Click"
+                                    OnClientClick="return confirm('Are you sure you want to remove this class?');"
+                                    CommandArgument ='<%# Eval("ID") %>'
+                                    />
+                                <asp:Button 
+                                    ID="Button4" 
+                                    runat="server" 
+                                    Text="View" 
+                                    CssClass="view-more-button mx-auto d-block" 
+                                    OnClick="ViewClass_Click"
+                                    CommandArgument ='<%# Eval("ID") %>'
+                                    />
+                            </div>
+                        </div>
+                </ItemTemplate>
+            </asp:Repeater>
     </div>
+</div>
 </asp:Content>
