@@ -15,6 +15,16 @@
         .work-card {
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+
+        .custom-textbox {
+            width: 100%;
+            padding: 15px;
+            border-radius: 20px;
+            border: 0px solid #ccc;
+            font-size: 16px;
+            margin-top: 10px;
+            background-color: #D9D9D9;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -37,7 +47,7 @@
                     <div class="p-3 work-card">
                         <h3>Your Work</h3>
                         <div style="border: 1px solid #ccc; border-radius: 10px;" class="p-3">
-                            <asp:TextBox ID="TextBox1" runat="server" Text="Google Drive Link" ></asp:TextBox>
+                            <asp:TextBox ID="TextBox1" runat="server" Text="Google Drive Link" class="custom-textbox" ></asp:TextBox>
                         </div>
                         <br />
                         <asp:Button ID="upload" runat="server" Text="Upload File" CssClass="custom-button" />
