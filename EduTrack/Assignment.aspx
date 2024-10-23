@@ -33,7 +33,7 @@
         <h1 id="h1_ExperimentName" runat="server">Experiment Name</h1>
         <div class="flex-container">
             <p class="description" id="P_TotalMarks" runat="server">25 points</p>
-            <p class="description"id="P_Due" runat="server">Due 11th August</p>
+            <p class="description" id="P_Due" runat="server">Due 11th August</p>
         </div>
         <hr />
 
@@ -50,10 +50,10 @@
                             <asp:TextBox ID="TextBox1" runat="server" placeholder="Google Drive Link" class="custom-textbox" ></asp:TextBox>
                         </div>
                         <br />
-                        <asp:Button ID="upload" runat="server" Text="Upload File" CssClass="custom-button" />
+                        <asp:Button ID="upload" runat="server" Text="Upload File" CssClass="custom-button" OnClick="upload_Click" />
                     </div>
                     <br />
-                    <div class="p-3 work-card">
+                    <div class="p-3 work-card" runat="server" id="Grade_Div">
                         <h3>Your Grade</h3>
                         <div style="border: 1px solid #ccc; border-radius: 10px;" class="p-3">
                             <p class="description" runat="server" id="P_Score">25/25</p>

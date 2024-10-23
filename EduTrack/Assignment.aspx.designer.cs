@@ -42,6 +42,15 @@ namespace EduTrack
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl P_TotalMarks;
 
         /// <summary>
+        /// P_Due control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl P_Due;
+
+        /// <summary>
         /// ExpDesc control.
         /// </summary>
         /// <remarks>
@@ -67,6 +76,15 @@ namespace EduTrack
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button upload;
+
+        /// <summary>
+        /// Grade_Div control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Grade_Div;
 
         /// <summary>
         /// P_Score control.
