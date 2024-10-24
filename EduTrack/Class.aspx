@@ -30,7 +30,7 @@
             <ItemTemplate>
                 <div class="col-sm feature-card p-4">
                     <h2 class="text-start fw-bold pt-2" style="color: black;"><%# Eval("Title") %></h2>
-                    <h6 class="text-end fw-bold" style="color: black;"><%# Eval("Due", "{0:dd-MM-yy}") %></h6>
+                    <h6 class="text-end fw-bold" style="color: black;">Due: <%# Eval("Due", "{0:dd-MM-yy}") %></h6>
                     <br />
                     <asp:Button 
                         ID="viewButton1" 

@@ -59,7 +59,9 @@ namespace EduTrack
 
         protected void viewClasswork_Click(object sender, EventArgs e)
         {
-            //!TODO
+            Button clickedBtn = sender as Button;
+            string assignId = clickedBtn.CommandArgument;
+            Response.Redirect("ClassworkStudentsWorkTeacherClass.aspx?cid=" + classId + "&cname=" + className + "&id=" + assignId);
         }
     }
 }

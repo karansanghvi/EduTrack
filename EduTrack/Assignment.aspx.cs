@@ -45,11 +45,11 @@ namespace EduTrack
                 }
                 P_CourseName.InnerHtml = cname;
                 h1_ExperimentName.InnerHtml = title;
-                P_TotalMarks.InnerHtml = points.ToString() + "points";
+                P_TotalMarks.InnerHtml = points.ToString() + " points";
                 P_Due.InnerHtml = duedate.ToString("dd-MM-yy");
                 ExpDesc.InnerHtml = desc;
 
-                cmd = new SqlCommand("select * from AssignmentSubs where StudentEmail = @email and AssignmentId = @id");
+                cmd = new SqlCommand("select * from AssignmentSubs where StudentEmail = @email and AssignmentId = @id", con);
                 cmd.Parameters.AddWithValue("@email", email);
                 cmd.Parameters.AddWithValue("@id", id);
                 
@@ -63,7 +63,7 @@ namespace EduTrack
                         TextBox1.Enabled = false;
                         upload.Visible = false;
                         Grade_Div.Visible = true;
-                        if (reader["isMarked"].ToString() == "1")
+                        if (reader["isMarked"].ToString() == "True")
                         {
                             P_Score.InnerHtml = "Points: " + reader["Marks"].ToString() + "/" + points.ToString();
                         }
@@ -71,6 +71,7 @@ namespace EduTrack
                         {
                             P_Score.InnerHtml = "Not Scored";
                         }
+                        break;
                     }
 
                     if(!hasExistingSubmission)
@@ -87,13 +88,16 @@ namespace EduTrack
             using(SqlConnection con = new SqlConnection(Common.connectionString))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("insert into AssignmentSubs (StudentEmail, AssignmentId, SubData, SubDate, Marks, isMarked) values (@email, @id, @subData, @subDate, @marks, @isMarked)", con);
+                SqlCommand cmd = new SqlCommand("insert into AssignmentSubs (StudentEmail, AssignmentId, SubData, SubDate, Marks, isMarked, StudentName) values (@email, @id, @subData, @subDate, @marks, @isMarked, @studentName)", con);
                 cmd.Parameters.AddWithValue("@email", Session["email"].ToString());
                 cmd.Parameters.AddWithValue("@id", id);
                 cmd.Parameters.AddWithValue("@subData", TextBox1.Text);
                 cmd.Parameters.AddWithValue("@subDate", DateTime.Now);
                 cmd.Parameters.AddWithValue("@marks", 0);
                 cmd.Parameters.AddWithValue("@isMarked", 0);
+                cmd.Parameters.AddWithValue("@studentName", Session["name"]);
+                cmd.ExecuteNonQuery();
+                Response.Redirect("Class.aspx?id=" + cid + "&name=" + cname);
             }
         }
 

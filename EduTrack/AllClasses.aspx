@@ -45,7 +45,7 @@
         <asp:Repeater ID="Repeater1" runat="server">
             <ItemTemplate>
                 <div style="background-color: #D9D9D9; border-radius: 10px;" class="p-4 flex-container">
-                    <h2 style="font-size: 30px;" class="text-button-gap">Due: <%# Eval("Name") %></h2>
+                    <h2 style="font-size: 30px;" class="text-button-gap"><%# Eval("Name") %></h2>
                     <asp:Button 
                         ID="viewMore1" 
                         runat="server" 

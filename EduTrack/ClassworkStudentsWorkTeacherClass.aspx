@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TeacherPanel.Master" AutoEventWireup="true" CodeBehind="ClassworkStudentsWorkTeacherClass.aspx.cs" Inherits="EduTrack.WebForm18" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/StudentPanel.Master" AutoEventWireup="true" CodeBehind="ClassworkStudentsWorkTeacherClass.aspx.cs" Inherits="EduTrack.WebForm18" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         .document-box {
@@ -60,75 +60,27 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="p-5">
-        <h1>Experiment Name</h1>
+        <h1 runat="server" id="H1_ExperimentName">Experiment Name</h1>
         <hr />
-        <div class="nav-class mb-4">
-            <a class="nav-link" aria-current="page" href="ClassworkAssignmentTeacherClass.aspx">Assignment</a>
-            <a class="nav-link active box" aria-current="page" href="ClassworkStudentsWorkTeacherClass.aspx">Student's Work</a>
-        </div>
-        <h2><a href="ClassworkTeacherClass.aspx" style="text-decoration: none; color: black;">Classwork ></a> Student's Work</h2>
         <br />
-            <div class="flex-container">
-                <h1>1</h1> 
-                <p>Handed In</p>
-                <h1>0</h1>
-                <p>Assigned</p>
+        <div class="container col-12 row row-gap-2">
+            <asp:Repeater ID="Repeater1" runat="server">
+                <ItemTemplate>
+                    <div class="col-sm-6">
+                        <div class="document-box p-3">
+                            <div>
+                                <h3><%# Eval("StudentName") %></h3>
+                                <asp:TextBox ID="TextBox4" runat="server" placeholder="Google Drive Link" Text='<%# Eval("SubData") %>' CssClass="custom-textbox" ></asp:TextBox>
+                            </div>
+                            <asp:TextBox ID="Textbox1" runat="server" placeholder="Enter Marks" CssClass="custom-textbox"></asp:TextBox>
+                            <br /> <br />
+                            <div class="text-center">
+                                <asp:Button ID="Submit_Marks" runat="server" CssClass="submit-button" Text="Submit" OnClick="Submit_Marks_Click" CommandArgument='<%# Eval("StudentEmail") %>' CommandName='<%# Eval("AssignmentId") %>' />
+                            </div>
+                        </div>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
             </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm">
-                    <div class="document-box p-3">
-                        <div>
-                            <h3>Karan Sanghvi</h3>
-                            <p>View Work</p>
-                        </div>
-                        <asp:TextBox ID="enterMarks" runat="server" placeholder="Enter Marks" CssClass="custom-textbox"></asp:TextBox>
-                        <br /> <br />
-                        <div class="text-center">
-                            <asp:Button ID="button1" runat="server" CssClass="submit-button" Text="Submit" />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm">
-                    <div class="document-box p-3">
-                        <div>
-                            <h3>Karan Sanghvi</h3>
-                            <p>View Work</p>
-                        </div>
-                        <asp:TextBox ID="TextBox1" runat="server" placeholder="Enter Marks" CssClass="custom-textbox"></asp:TextBox>
-                        <br /> <br />
-                        <div class="text-center">
-                            <asp:Button ID="button2" runat="server" CssClass="submit-button" Text="Submit" />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm">
-                    <div class="document-box p-3">
-                        <div>
-                            <h3>Karan Sanghvi</h3>
-                            <p>View Work</p>
-                        </div>
-                        <asp:TextBox ID="TextBox2" runat="server" placeholder="Enter Marks" CssClass="custom-textbox"></asp:TextBox>
-                        <br /> <br />
-                        <div class="text-center">
-                            <asp:Button ID="button3" runat="server" CssClass="submit-button" Text="Submit" />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm">
-                    <div class="document-box p-3">
-                        <div>
-                            <h3>Karan Sanghvi</h3>
-                            <p>View Work</p>
-                        </div>
-                        <asp:TextBox ID="TextBox3" runat="server" placeholder="Enter Marks" CssClass="custom-textbox"></asp:TextBox>
-                        <br /> <br />
-                        <div class="text-center">
-                            <asp:Button ID="button4" runat="server" CssClass="submit-button" Text="Submit" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </asp:Content>
