@@ -71,6 +71,7 @@
                             Text="View More" 
                             OnClick="viewClasswork_Click"
                             CommandArgument ='<%# Eval("Id") %>'
+                            CommandName ='<%# Eval("Title") %>'
                             />
                     </div>
                 </div>

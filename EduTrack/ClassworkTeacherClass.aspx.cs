@@ -17,6 +17,10 @@ namespace EduTrack
         string className;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["isTeacher"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
             classId = Request.QueryString["id"].ToString();
             className = Request.QueryString["name"].ToString();
 
@@ -61,7 +65,8 @@ namespace EduTrack
         {
             Button clickedBtn = sender as Button;
             string assignId = clickedBtn.CommandArgument;
-            Response.Redirect("ClassworkStudentsWorkTeacherClass.aspx?cid=" + classId + "&cname=" + className + "&id=" + assignId);
+            string assignName = clickedBtn.CommandName;
+            Response.Redirect("ClassworkStudentsWorkTeacherClass.aspx?cid=" + classId + "&cname=" + className + "&id=" + assignId + "&name=" + assignName);
         }
     }
 }

@@ -70,6 +70,7 @@
                         <div class="document-box p-3">
                             <div>
                                 <h3><%# Eval("StudentName") %></h3>
+                                <h6>Submitted: <%# Eval("SubDate", "{0:dd-MM-yy}") %></h6>
                                 <asp:TextBox ID="TextBox4" runat="server" placeholder="Google Drive Link" Text='<%# Eval("SubData") %>' CssClass="custom-textbox" ></asp:TextBox>
                             </div>
                             <asp:TextBox ID="Textbox1" runat="server" placeholder="Enter Marks" CssClass="custom-textbox"></asp:TextBox>

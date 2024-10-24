@@ -25,10 +25,11 @@ namespace EduTrack
             using (SqlConnection con = new SqlConnection(Common.connectionString))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("insert into Courses (Name, ID, Description) values (@name, @id, @desc)", con);
+                SqlCommand cmd = new SqlCommand("insert into Courses (Name, ID, Description, OwnerEmail) values (@name, @id, @desc, @email)", con);
                 cmd.Parameters.AddWithValue("@name", name);
                 cmd.Parameters.AddWithValue("@id", code);
                 cmd.Parameters.AddWithValue("@desc", desc);
+                cmd.Parameters.AddWithValue("@email", Session["email"].ToString());
                 cmd.ExecuteNonQuery();
             }
 

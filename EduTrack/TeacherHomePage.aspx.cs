@@ -18,6 +18,10 @@ namespace EduTrack
             {
                 BindRepeater();
             }
+            if (Session["isTeacher"] == null || Session["email"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
         }
 
         private void BindRepeater()
@@ -25,7 +29,8 @@ namespace EduTrack
             using (SqlConnection con = new SqlConnection(Common.connectionString))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("select Name, ID from Courses", con);
+                SqlCommand cmd = new SqlCommand("select Name, ID from Courses where OwnerEmail = @email", con);
+                cmd.Parameters.AddWithValue("@email", Session["email"].ToString());
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
@@ -58,7 +63,13 @@ namespace EduTrack
                 SqlCommand cmd = new SqlCommand("delete from Courses where ID = @id",con);
                 cmd.Parameters.AddWithValue("@id", id);
                 cmd.ExecuteNonQuery();
+                cmd = new SqlCommand("delete from AssignmentSubs where AssignmentId in (select Id from Assignments where CourseId = @cid);", con);
+                cmd.Parameters.AddWithValue("@cid", id);
+                cmd.ExecuteNonQuery();
                 cmd = new SqlCommand("delete from Assignments where CourseId = @cid",con);
+                cmd.Parameters.AddWithValue("@cid", id);
+                cmd.ExecuteNonQuery();
+                cmd = new SqlCommand("delete from CourseSubs where CourseId = @cid", con);
                 cmd.Parameters.AddWithValue("@cid", id);
                 cmd.ExecuteNonQuery();
             }

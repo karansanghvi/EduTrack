@@ -24,7 +24,7 @@
                 <div class="pt-4">
                     <asp:Label ID="passwordLabel" runat="server" Text="Enter Password:"></asp:Label>
                     <br />
-                    <asp:TextBox ID="password" runat="server" placeholder="Password" CssClass="custom-textbox"></asp:TextBox>
+                    <asp:TextBox ID="password" TextMode="Password" runat="server" placeholder="Password" CssClass="custom-textbox"></asp:TextBox>
                 </div>
             <p class="text-end pt-3">Forgot Password?</p>
             <asp:Button ID="loginButton" runat="server" CssClass="custom-button" Text="Login" OnClick="loginButton_Click" />

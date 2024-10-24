@@ -45,8 +45,20 @@ namespace EduTrack
                 string currentPageName = System.IO.Path.GetFileName(Request.Url.AbsolutePath);
                 if (currentPageName != "Login.aspx")
                 {
-                    //Response.Redirect("Login.aspx");
+                    Response.Redirect("Login.aspx");
                 }
+            }
+        }
+
+        protected void ClassConnect_Click(object sender, EventArgs e)
+        {
+            if (Session["isTeacher"] != null)
+            {
+                Response.Redirect("TeacherHomePage.aspx");
+            }
+            else if (Session["isTeacher"] != null)
+            {
+                Response.Redirect("AllClasses.aspx");
             }
         }
     }

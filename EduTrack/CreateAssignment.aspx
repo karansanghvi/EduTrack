@@ -47,11 +47,13 @@
             <div class="pt-2">
                 <asp:Label ID="assignmentTitleLabel" runat="server">Enter Title:</asp:Label>
                 <asp:TextBox ID="assignmentTitle" runat="server" placeholder="Title" CssClass="custom-textbox"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="assignmentTitle" runat="server" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
             </div>
             <br />
             <div class="pt-2">
-                <asp:Label ID="assignmentDescriptionLabel" runat="server">Enter Instructions/Description (optional):</asp:Label>
+                <asp:Label ID="assignmentDescriptionLabel" runat="server">Enter Instructions/Description:</asp:Label>
                 <asp:TextBox ID="assignmentDescription" runat="server" placeholder="Description" CssClass="custom-textbox"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="assignmentDescription" runat="server" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
             </div>
         </div>
 
@@ -64,11 +66,14 @@
                 <div class="row">
                     <div class="col-sm">
                         <asp:Label ID="pointsLabel" runat="server">Enter Points:</asp:Label>
-                        <asp:TextBox ID="pointsText" runat="server" Text="Points" CssClass="custom-textbox"></asp:TextBox>
+                        <asp:TextBox ID="pointsText" runat="server" placeholder="Points" CssClass="custom-textbox"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="pointsText" runat="server" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
+
                     </div>
                     <div class="col-sm">
                         <asp:Label ID="dueDateLabel" runat="server">Enter Due Date:</asp:Label>
                         <asp:TextBox ID="dueDate" runat="server" TextMode="Date" CssClass="custom-textbox"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ControlToValidate="dueDate" runat="server" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
                 </div>
                 </div>
             </div>

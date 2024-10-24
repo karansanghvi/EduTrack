@@ -12,18 +12,20 @@ namespace EduTrack
 {
     public partial class WebForm18 : System.Web.UI.Page
     {
-        string cid, cname, assignId;
+        string cid, cname, assignId, assignName;
         protected void Page_Load(object sender, EventArgs e)
         {
             cid = Request.QueryString["cid"];
             cname = Request.QueryString["cname"];
             assignId = Request.QueryString["id"];
+            assignName = Request.QueryString["name"];
 
+            H1_ExperimentName.InnerHtml = assignName;
             if(!IsPostBack)
             {
                 BindRepeater();
             }
-
+            
         }
 
         private void BindRepeater()
@@ -67,6 +69,8 @@ namespace EduTrack
                 cmd.Parameters.AddWithValue("@email", email);
                 cmd.ExecuteNonQuery();
             }
+
+            BindRepeater();
         }
     }
 }

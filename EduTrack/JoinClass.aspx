@@ -38,6 +38,7 @@
             <p class="description">Ask your teacher for the class code, then enter it to join the class</p>
             <div class="pt-2">
                 <asp:TextBox ID="classCode" runat="server" placeholder="Class Code" CssClass="custom-textbox"></asp:TextBox>
+
             </div>
             <div class="p-4 flex-container">
                 <asp:Button 
@@ -47,7 +48,7 @@
                     CssClass="cancel-button" 
                     OnClick="cancelButton_Click"
                     />
-                <asp:Button ID="Button1" runat="server" Text="Join Class" CssClass="join-button" />
+                <asp:Button ID="Button1" runat="server" Text="Join Class" CssClass="join-button" OnClick="Button1_Click" />
             </div>
         </div>
     </div>

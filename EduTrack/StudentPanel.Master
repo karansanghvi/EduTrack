@@ -31,10 +31,7 @@
                                 <a class="nav-link active" aria-current="page" href="Default.aspx">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="Classes.aspx">Classes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="ToDo.aspx">ToDo</a>
+                                <asp:Button ID="Button1" CssClass="nav-link" OnClick="ClassConnect_Click" runat="server" Text="Classes" />
                             </li>
                         </ul>
                     </div>
