@@ -79,7 +79,7 @@ namespace EduTrack
         private void ResetUserPassword(string email)
         {
             string randPass = Common.GenerateRandomString(8);
-            string emailContent = "Your Edutrack Password has been reset by Admin. You can use the password: " + randPass + "to login to your account. Please be sure to change the password once you have logged in.";
+            string emailContent = "Your Edutrack Password has been reset by Admin. You can use the password: " + randPass + " to login to your account. Please be sure to change the password once you have logged in.";
             string emailSubject = "Your Edutrack Password has been reset";
             string toEmail = email;
             string fromEmail = "edutrack4@gmail.com";
@@ -90,7 +90,7 @@ namespace EduTrack
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand("update teachers set Password = '" + Common.ComputeSha256Hash(randPass) + "' where Email = '" + email + "';");
+                    SqlCommand cmd = new SqlCommand("update teachers set Password = '" + Common.ComputeSha256Hash(randPass) + "' where Email = '" + email + "';",conn);
                     cmd.ExecuteNonQuery();
                 }
             }

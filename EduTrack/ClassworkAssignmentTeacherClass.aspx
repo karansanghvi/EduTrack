@@ -5,7 +5,7 @@
             border: 1px solid #ccc;
             border-radius: 10px;
         }
-
+        
         .nav-class {
             background-color: #D9D9D9;
             border: none;

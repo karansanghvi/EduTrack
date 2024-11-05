@@ -26,7 +26,7 @@
                     <br />
                     <asp:TextBox ID="password" TextMode="Password" runat="server" placeholder="Password" CssClass="custom-textbox"></asp:TextBox>
                 </div>
-            <p class="text-end pt-3">Forgot Password?</p>
+            <br />
             <asp:Button ID="loginButton" runat="server" CssClass="custom-button" Text="Login" OnClick="loginButton_Click" />
         </div>
     </div>
